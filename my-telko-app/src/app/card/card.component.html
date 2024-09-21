@@ -1,1 +1,25 @@
-<p>card works!</p>
+<div class="shopping-card">
+    <!-- Item Name -->
+    <h3>{{ item.name }}</h3>
+    
+    <!-- Description -->
+    <p>{{ item.description }}</p>
+  
+    <!-- Price -->
+    <p><strong>Price:</strong> ₹{{ item.price }}</p>
+  
+    <!-- Delivery Estimation -->
+    <p><strong>Delivery Estimate:</strong> {{item.deliveryDate }}</p>
+  
+    <!-- Customer Review -->
+    <p><strong>Customer Review:</strong> {{item.customerReview }} stars</p>
+  
+    <!-- Divider -->
+    <hr>
+  
+    <!-- Subtotal -->
+    <div class="subtotal">
+      <strong>Subtotal:</strong> ₹{{ subtotal }}
+    </div>
+  </div>
+  

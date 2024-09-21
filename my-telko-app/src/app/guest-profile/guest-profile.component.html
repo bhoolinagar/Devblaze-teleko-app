@@ -1,1 +1,66 @@
-<p>guest-profile works!</p>
+<div class="guest-profile-container">
+    <h2>Guest Profile Form</h2>
+    <form #guestForm="ngForm" (ngSubmit)="onSubmit(guestForm)">
+      <!-- Mobile Field -->
+      <div>
+        <label for="mobile">Mobile:</label>
+        <input
+          type="text"
+          id="mobile"
+          name="mobile"
+          [(ngModel)]="guest.mobile"
+          required
+          pattern="[0-9]{10}"
+          placeholder="Enter your mobile number"
+        />
+      </div>
+  
+      <!-- Address Field -->
+      <div>
+        <label for="address">Address:</label>
+        <textarea
+          id="address"
+          name="address"
+          [(ngModel)]="guest.address"
+          required
+          placeholder="Enter your address"
+        ></textarea>
+      </div>
+  
+      <!-- Pincode Field -->
+      <div>
+        <label for="pincode">Pincode:</label>
+        <input
+          type="text"
+          id="pincode"
+          name="pincode"
+          [(ngModel)]="guest.pincode"
+          required
+          pattern="[0-9]{6}"
+          placeholder="Enter your pincode"
+        />
+      </div>
+  
+      <!-- Email Field -->
+      <div>
+        <label for="email">Email ID:</label>
+        <input
+          type="email"
+          id="email"
+          name="email"
+          [(ngModel)]="guest.email"
+          required
+          placeholder="Enter your email address"
+        />
+      </div>
+  
+      <!-- Submit Button -->
+      <div>
+        <button type="submit" [disabled]="guestForm.invalid" class="submit-button">
+          Submit
+        </button>
+      </div>
+    </form>
+  </div>
+
+  

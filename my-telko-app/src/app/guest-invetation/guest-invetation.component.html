@@ -1,5 +1,5 @@
 <div class="container">
-    <h2>Guest Profile</h2>
+    <h2>Guest Invitation</h2>
     <form (ngSubmit)="onSubmit()" #guestProfileForm="ngForm">
       <div class="form-group">
         <label for="username">Username:</label>
@@ -20,14 +20,31 @@
       <button 
         type="submit" 
         class="btn btn-primary" 
-        [disabled]="guestProfileForm.invalid"
-      >
+        [disabled]="guestProfileForm.invalid">
+    
         Submit
       </button>
     </form>
-  
+ 
+  <nav> <a href="/guest-profile">Existing</a></nav>
+
     <div *ngIf="submitted">
-      <h3>Submitted Profile:</h3>
-      <p>Username: {{ guestProfile.username }}</p>
-    </div>
+        
+        <a href="/card"  > new page</a>
+    <!--     <nav>
+            <ul>
+              <li><a routerLink="/crad">Card detials</a>
+              </li>
+              Add more links here 
+            </ul>
+          </nav>-->
+            
+          
+<
+          
+
+      <!--
+        <h3>Submitted Profile:</h3>
+      <p>Username: {{ guestProfile.username }}</p>-->
+   </div>
   </div>

@@ -1,6 +1,9 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { CardComponent } from './card.component';
+import { FormsModule } from '@angular/forms';
+import { CommonModule } from '@angular/common';
+import { BrowserModule } from '@angular/platform-browser';
 
 describe('CardComponent', () => {
   let component: CardComponent;
@@ -8,7 +11,13 @@ describe('CardComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [CardComponent]
+      imports: [
+        CardComponent, 
+        FormsModule,
+        CommonModule,
+        BrowserModule,CardComponent
+
+      ]
     })
     .compileComponents();
 
